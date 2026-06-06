@@ -17,7 +17,7 @@ use std::io::Write;
 
 #[derive(Debug, Parser)]
 #[command(
-    name = "rustscan-lite",
+    name = "veloscan",
     version,
     about = "Fast asynchronous network scanner",
     long_about = "A Rust-based alternative to Nmap for quick host and port discovery."
@@ -307,6 +307,7 @@ fn print_scan_results(live_hosts: &[IpAddr], results: Vec<ScanResult>) {
         }
     }
 }
+
 
 
 

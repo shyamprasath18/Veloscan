@@ -1,4 +1,4 @@
-# RustScan Lite
+﻿# RustScan Lite
 
 A fast, asynchronous network scanner written in Rust. It's designed to be a lightweight alternative to Nmap for quick host discovery and port scanning.
 
@@ -24,16 +24,16 @@ A fast, asynchronous network scanner written in Rust. It's designed to be a ligh
 
 ```powershell
 git clone <your-repo-url>
-cd rustscan-lite
+cd veloscan
 cargo build --release
 ```
 
-The executable will be generated at `target/release/rustscan-lite.exe`.
+The executable will be generated at `target/release/veloscan.exe`.
 
 ## Usage
 
 ```text
-Usage: rustscan-lite.exe [OPTIONS] <TARGETS>
+Usage: veloscan.exe [OPTIONS] <TARGETS>
 
 Arguments:
   <TARGETS>  Target IPs or CIDR blocks (e.g., 192.168.1.1, 10.0.0.0/24)
@@ -53,29 +53,30 @@ Options:
 
 #### 1. Basic TCP Scan
 ```powershell
-rustscan-lite.exe 192.168.1.1
+veloscan.exe 192.168.1.1
 ```
 
 #### 2. Scan specific ports with Service Detection
 ```powershell
-rustscan-lite.exe 192.168.1.1 -p 22,80,443,3389 --service
+veloscan.exe 192.168.1.1 -p 22,80,443,3389 --service
 ```
 
 #### 3. UDP Scan + TCP Scan
 ```powershell
-rustscan-lite.exe 192.168.1.1 --udp
+veloscan.exe 192.168.1.1 --udp
 ```
 
 #### 4. Host Discovery Only (Ping Sweep)
 ```powershell
-rustscan-lite.exe 192.168.1.0/24 --ping-only
+veloscan.exe 192.168.1.0/24 --ping-only
 ```
 
 #### 5. High-Speed Scan
 ```powershell
-rustscan-lite.exe 10.0.0.0/16 -c 5000 -t 200
+veloscan.exe 10.0.0.0/16 -c 5000 -t 200
 ```
 
 ## License
 
 MIT
+
